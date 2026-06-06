@@ -220,7 +220,7 @@
             border: 1px solid var(--border-color);
             border-radius: 18px;
             padding: 8px 10px 8px 18px;
-            align-items: center;
+            align-items: flex-end;
             transition: all 0.3s;
             box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
         }
@@ -240,7 +240,12 @@
             outline: none;
             padding: 8px 0;
             resize: none;
-            height: 24px;
+            height: auto;
+            min-height: 24px;
+            max-height: 200px;
+            line-height: 1.5;
+            overflow-y: auto;
+            field-sizing: content;
         }
 
         .send-button {
@@ -460,8 +465,7 @@
         <!-- Input Area (fixed at the bottom) -->
         <div class="input-area">
             <div class="input-row">
-                <input type="text" id="user-input" class="chat-input" placeholder="Ask GemmaJnana anything..."
-                    onkeydown="if(event.key === 'Enter') handleSend()">
+                <textarea id="user-input" class="chat-input" placeholder="Ask GemmaJnana anything..." rows="1"></textarea>
                 <button onclick="handleSend()" class="send-button" id="send-button">
                     <svg viewBox="0 0 24 24">
                         <line x1="22" y1="2" x2="11" y2="13"></line>
@@ -564,6 +568,7 @@
             if (!prompt) return;
 
             inputEl.value = '';
+            adjustHeight();
 
             // Handle slash commands
             if (prompt.startsWith('/')) {
@@ -641,9 +646,29 @@
             }
         }
 
+        const userInputEl = document.getElementById('user-input');
+
+        function adjustHeight() {
+            if (!CSS.supports('field-sizing', 'content')) {
+                userInputEl.style.height = 'auto';
+                userInputEl.style.height = userInputEl.scrollHeight + 'px';
+            }
+        }
+
+        userInputEl.addEventListener('input', adjustHeight);
+        userInputEl.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter' && !event.shiftKey) {
+                event.preventDefault();
+                handleSend();
+            }
+        });
+
         // Initialize connection check and set poll
         checkConnection();
         setInterval(checkConnection, 5000);
+
+        // Adjust height initially
+        adjustHeight();
     </script>
 </body>
 
