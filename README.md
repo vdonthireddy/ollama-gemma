@@ -4,7 +4,22 @@ A local development stack to download, serve, and interact with Google's **Gemma
 
 ---
 
-## 📂 Project Architecture
+## Project Architecture Flow
+
+Below is the visual flow of the GemmaJnana local architecture.
+
+![Architecture Flow](./images/architecture_flow.png)
+
+### Data Flow Diagram
+
+```mermaid
+graph TD
+    Client[Browser UI: index.html] <-->|HTTP/SSE| Backend[FastAPI Gateway: app.py]
+    Backend <-->|Local API Port 11434| Ollama[Ollama Server]
+    Ollama <-->|Local Inference| Model[(Google Gemma 4 Model)]
+```
+
+### Components Description
 
 *   **`start.sh`**: The master automation script. It:
     1. Checks if Ollama is installed and automatically updates it to the latest version if needed.
@@ -18,7 +33,7 @@ A local development stack to download, serve, and interact with Google's **Gemma
 
 ---
 
-## ⚡ Prerequisites
+## Prerequisites
 
 To run this application, make sure you have:
 1.  **macOS** (since automated updates look for `/Applications/Ollama.app`).
@@ -29,7 +44,7 @@ To run this application, make sure you have:
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 1.  **Start the entire service stack**:
     ```bash
@@ -48,7 +63,7 @@ To run this application, make sure you have:
 
 ---
 
-## 🔧 API Reference
+## API Reference
 
 The FastAPI gateway runs at `http://127.0.0.1:8000` and offers the following endpoints:
 
