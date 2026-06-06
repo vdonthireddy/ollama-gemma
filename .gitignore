@@ -46,3 +46,6 @@ Icon
 
 # Project specific temporary folders
 temp_ollama/
+
+# LinkedIn Article (ignore from git)
+linkedin_article.md
