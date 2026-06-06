@@ -1,4 +1,4 @@
-# Jnana from Gemma
+# GemmaJnana
 
 A local development stack to download, serve, and interact with Google's **Gemma 4 (Effective 4B)** model using **Ollama** and a **FastAPI** gateway. The package comes with a beautiful, fully animated chat playground UI.
 

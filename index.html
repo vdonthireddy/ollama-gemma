@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jnana from Gemma Playground</title>
+    <title>GemmaJnana Playground</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
@@ -439,7 +439,7 @@
             <div class="header-left">
                 <div class="status-dot" id="status-indicator"></div>
                 <div class="header-title">
-                    <h2>Jnana from Gemma</h2>
+                    <h2>GemmaJnana</h2>
                     <p id="server-status-text">Connecting to gateway...</p>
                 </div>
             </div>
@@ -452,15 +452,15 @@
         <div class="messages-container" id="messages-container">
             <div class="empty-state" id="empty-state">
                 <div class="empty-icon">🤖</div>
-                <h3>Jnana from Gemma</h3>
-                <p>Welcome! Type a prompt below to communicate with the local Jnana (Google Gemma 4 Effective 4B) assistant via FastAPI.</p>
+                <h3>GemmaJnana</h3>
+                <p>Welcome! Type a prompt below to communicate with the local GemmaJnana (Google Gemma 4 Effective 4B) assistant via FastAPI.</p>
             </div>
         </div>
 
         <!-- Input Area (fixed at the bottom) -->
         <div class="input-area">
             <div class="input-row">
-                <input type="text" id="user-input" class="chat-input" placeholder="Ask Jnana anything..."
+                <input type="text" id="user-input" class="chat-input" placeholder="Ask GemmaJnana anything..."
                     onkeydown="if(event.key === 'Enter') handleSend()">
                 <button onclick="handleSend()" class="send-button" id="send-button">
                     <svg viewBox="0 0 24 24">
@@ -517,8 +517,8 @@
             container.innerHTML = `
                 <div class="empty-state" id="empty-state">
                     <div class="empty-icon">🤖</div>
-                    <h3>Jnana from Gemma</h3>
-                    <p>Welcome! Type a prompt below to communicate with the local Jnana (Google Gemma 4 Effective 4B) assistant via FastAPI.</p>
+                    <h3>GemmaJnana</h3>
+                    <p>Welcome! Type a prompt below to communicate with the local GemmaJnana (Google Gemma 4 Effective 4B) assistant via FastAPI.</p>
                 </div>
             `;
         }
@@ -579,7 +579,7 @@
             const temperature = parseFloat(document.getElementById('temperature').value) || 0.7;
 
             // Create Assistant Message Bubble
-            const assistantBubble = appendMessage('Jnana', '', 'assistant');
+            const assistantBubble = appendMessage('GemmaJnana', '', 'assistant');
             assistantBubble.innerHTML = '<span class="blinking-dots">...</span>';
 
             try {

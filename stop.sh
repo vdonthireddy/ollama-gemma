@@ -9,7 +9,7 @@ YELLOW='\033[1;33m'
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
-echo -e "${BLUE}=== Stopping Jnana from Gemma Stack ===${NC}\n"
+echo -e "${BLUE}=== Stopping GemmaJnana Stack ===${NC}\n"
 
 # 1. Stop Python lightweight HTTP server
 echo -e "${YELLOW}Stopping lightweight HTTP Web Server (port 8080)...${NC}"

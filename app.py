@@ -6,7 +6,7 @@ from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 from typing import List
 
-app = FastAPI(title="Jnana from Gemma Gateway")
+app = FastAPI(title="GemmaJnana Gateway")
 
 # Enable CORS for the frontend chat client
 app.add_middleware(

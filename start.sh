@@ -8,7 +8,7 @@ YELLOW='\033[1;33m'
 RED='\033[0;31m'
 NC='\033[0m'
 
-echo -e "${BLUE}=== Jnana from Gemma Setup ===${NC}\n"
+echo -e "${BLUE}=== GemmaJnana Setup ===${NC}\n"
 
 FORCE_RESTART=false
 
