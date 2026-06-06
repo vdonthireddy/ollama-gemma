@@ -35,6 +35,20 @@ graph TD
 
 ---
 
+## What you can and cannot do
+
+Before running the application, it is important to understand what local LLMs are good at and where they fail:
+
+| What you CAN do with Local LLMs | What you CANNOT do with Local LLMs |
+| :--- | :--- |
+| **Complete Privacy**: Since everything is running on your machine itself, your private code, emails, or personal data never goes to any server outside. | **High speed on old hardware**: If your laptop does not have minimum 8GB/16GB RAM or GPU cores (like Apple Silicon or Nvidia), the response will be very slow. |
+| **Works 100% Offline**: You can use the model on a flight, train, or when your wifi is down. No active internet is needed after downloading the model. | **Live web search**: The model does not connect to the internet to search Google, so it cannot answer about current news or live sports scores. |
+| **Zero Bills**: There is no token cost or monthly subscription. It is fully free of cost. | **Handling massive documents**: Small local models have limited memory (context window) and will forget details if the chat becomes too long. |
+| **Fast testing**: You can tweak python backend parameters or system instructions as much as you want without worrying about API limits. | **Very complex logic**: Small models (like 4B parameters) are amazing for normal coding support and general writing, but they struggle with complex math or heavy logic tasks. |
+| **Generate text and code**: Write summaries, emails, clean python scripts, and format tables easily. | **Generate images directly**: These local LLMs are text-only. They cannot generate images or diagrams directly (you need separate diffusion models for that). |
+
+---
+
 ## Prerequisites
 
 To run this application, make sure you have:
