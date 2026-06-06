@@ -1,6 +1,6 @@
 # GemmaJnana
 
-![GemmaJnana Banner](./images/linkedin_banner_v2.png)
+![GemmaJnana Banner](./images/linkedin_banner_v3.png)
 
 A local development stack to download, serve, and interact with Google's **Gemma 4 (Effective 4B)** model using **Ollama** and a **FastAPI** gateway. The package comes with a beautiful, fully animated chat playground UI.
 
